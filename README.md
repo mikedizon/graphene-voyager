@@ -1,14 +1,14 @@
-# graphiql voyager
+# graphene voyager
 
-This django app adds [ graphql voyager ](https://github.com/IvanGoncharov/graphql-voyager)
+This django app adds [ graphql voyager ](https://github.com/IvanGoncharov/graphql-voyager) to your django graphene app.
 
 ## Installation
 
-`pip install graphene_yoyager`
+`pip install graphene_voyager`
 
 ## Setup
 
-Add `graphene_yoyager` to your `INSTALLED_APPS`.
+Add `graphene_voyager` to your `INSTALLED_APPS`.
 
 Set `GRAPHQL_ENDPOINT` environment variable e.g. `http://localhost:8000/graphql/` (don't forget the trailing slash!)
 
@@ -24,7 +24,7 @@ Update urls.py configuration to your `settings.py`:
 
 ```python
 
-    url(r'^graphql/', include('graphene_yoyager.urls')),
+    url(r'^graphql/', include('graphene_voyager.urls')),
 urlpatterns = [
     ....
     path("graphql/", csrf_exempt(GraphQLView.as_view(graphiql=True))),
